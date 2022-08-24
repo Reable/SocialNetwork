@@ -15,10 +15,10 @@ const app: Express = express();
 app.use(express.json());
 
 
-app.use('/api/user', UserRoutes)
+app.use('/api/user', UserRoutes);
 
 
-app.use(notFound)
+app.use(notFound);
 app.use(
     httpErrorHandler({
         formatError: (err, _req, _isExposed) => {
@@ -39,4 +39,4 @@ const PORT: string | number = process.env.PORT || 3000;
 
 http.createServer(app).listen(PORT, ()=>{
     console.log(`Server service-user is running on port 3000`);
-})
+});
