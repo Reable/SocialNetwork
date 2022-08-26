@@ -6,7 +6,9 @@ import httpErrorHandler from "http-errors-express";
 import { notFound } from "./middlewares";
 
 import dotenv from "dotenv";
-dotenv.config({path:'../.env'});
+dotenv.config({
+    path: ".env"
+})
 
 const app: Express = express();
 app.use(express.json());
