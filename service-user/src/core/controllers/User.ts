@@ -15,7 +15,7 @@ class User {
         return 'hello world';
     }
 
-    async registration(data: IDataRegistration, _headers) {
+    async registration(data: IDataRegistration, _headers):Promise<string> {
         const user: IUser = await this._userStorage.createNewUser(data)
         return await this.generateToken(user);
     }
