@@ -3,10 +3,7 @@ import http from "http";
 import httpErrorHandler from "http-errors-express";
 
 //Middlewares
-import {notFound} from "./middlewares";
-
-//Routes
-import UserRoutes from "./routes/User";
+import { notFound } from "./middlewares";
 
 import dotenv from "dotenv";
 dotenv.config({path:'../.env'});
@@ -15,6 +12,8 @@ const app: Express = express();
 app.use(express.json());
 
 
+//Routes
+import UserRoutes from "./routes/User";
 app.use('/api/user', UserRoutes);
 
 

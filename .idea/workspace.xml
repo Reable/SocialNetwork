@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="589b1b71-4db6-4896-a434-5382938479b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/service-user/dist/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/dist/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/dist/core/controllers/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/dist/core/helpers/interface.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/dist/core/services/database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/dist/core/storage/UserStorage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/dist/core/system/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/dist/middlewares/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/dist/routes/User/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/src/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/src/core/services/database.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/src/core/storage/UserStorage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/.env" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/core/controllers/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/core/controllers/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/core/helpers/interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/core/helpers/interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/core/system/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/core/system/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/routes/User/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/routes/User/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
