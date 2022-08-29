@@ -1,4 +1,4 @@
-import type {IDataAuthorization, IDataRegistration, IUser} from "../helpers/interface";
+import type { IDataRegistration, IUser } from "../helpers/interface";
 import db from "../services/database";
 
 class UserStorage {
@@ -8,8 +8,8 @@ class UserStorage {
     constructor() {
     }
 
-    async findOne(user: IDataAuthorization){
-        return db(UserStorage.USER_TABLE_NAME).where(user);
+    async findUser(data){
+        return db(UserStorage.USER_TABLE_NAME).where(data);
     }
 
     async createNewUser(user: IDataRegistration): Promise<IUser>{

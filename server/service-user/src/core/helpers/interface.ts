@@ -1,5 +1,5 @@
 export interface IDataAuthorization {
-    phone: string
+    email: string
     password: string
 }
 

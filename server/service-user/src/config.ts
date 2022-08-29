@@ -11,5 +11,5 @@ export const database: IConnectDatabase = {
     }
 };
 
-export const JWT_KEY: string | undefined = process.env.SECRET_KEY;
+export const JWT_KEY: string | undefined = process.env.JWT_SECRET_KEY;
 export const JWT_LIFE: string = "7d";
