@@ -1,5 +1,5 @@
 import express, {NextFunction, Request, Response, Router} from "express";
-import User from "../../core/system/User";
+import User from "../core/system/User";
 
 const router: Router = express.Router();
 

@@ -42,14 +42,14 @@ class User {
 
         const validator = new Validator();
 
-        validator.setRules('email', Validator.TYPES.string().required())
-        validator.setRules('name', Validator.TYPES.string().required())
-        validator.setRules('surname', Validator.TYPES.string().required())
-        validator.setRules('password', Validator.TYPES.string().required())
+        validator.setRules('email', Validator.TYPES.string().required());
+        validator.setRules('name', Validator.TYPES.string().required());
+        validator.setRules('surname', Validator.TYPES.string().required());
+        validator.setRules('password', Validator.TYPES.string().required());
 
         validator.validate(data);
 
-        const checkExist: [IUser] = await this._userStorage.findOneUser(data);
+        const checkExist: [IUser] = await this._userStorage.findUser({ email: data.email });
 
         if (checkExist.length) {
             throw new BadRequestError("User already exists");

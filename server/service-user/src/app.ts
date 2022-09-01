@@ -1,4 +1,4 @@
-import express, {Express} from "express";
+import express, {Express, Request} from "express";
 import http from "http";
 import httpErrorHandler from "http-errors-express";
 
@@ -15,14 +15,14 @@ app.use(express.json());
 
 
 //Routes
-import UserRoutes from "./routes/User";
-app.use('/api/user', UserRoutes);
+import Routes from "./routes/index";
+app.use('/api/user', Routes);
 
 
 app.use(notFound);
 app.use(
     httpErrorHandler({
-        formatError: (err, _req, _isExposed) => {
+        formatError: (err, _req: Request, _isExposed) => {
             return {
                 result: false,
                 error: {

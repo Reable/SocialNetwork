@@ -2,29 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="589b1b71-4db6-4896-a434-5382938479b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/service-user/src/core/Errors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service-user/src/core/helpers/validator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/app.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/controllers/MailController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/storage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/system/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/middlewares/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/routes/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-user/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-user/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/service-user/src/core/controllers/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/controllers/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/helpers/interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/helpers/interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/storage/UserStorage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/storage/UserStorage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/app.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/core/controllers/User.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/core/helpers/Enums.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/core/helpers/interface.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/core/services/database.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/core/storage/UserStorage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/core/system/User.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/middlewares/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/routes/User/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-user/src/routes/User/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/routes/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +53,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/service-user/src/routes" />
+      <recent name="$PROJECT_DIR$/server/service_mail/src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

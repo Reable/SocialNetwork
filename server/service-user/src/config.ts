@@ -1,4 +1,7 @@
+import dotenv from "dotenv";
 import type { IConnectDatabase } from "./core/helpers/interface";
+
+dotenv.config()
 
 export const database: IConnectDatabase = {
     client: "mysql",
