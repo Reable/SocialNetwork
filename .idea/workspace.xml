@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="589b1b71-4db6-4896-a434-5382938479b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/service-mail/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service-mail/src/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service-mail/src/config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/controllers/MailController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/storage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/system/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service-mail/src/middlewares/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/service-mail/src/routes/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/Errors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/helpers/Interfaces.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/helpers/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/controllers/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/controllers/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/routes/User/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/routes/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-mail/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/controllers/MailController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/controllers/MailController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/system/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/system/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +49,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/service-mail/src/core/helpers" />
       <recent name="$PROJECT_DIR$/server/service-user/src/routes" />
       <recent name="$PROJECT_DIR$/server/service_mail/src" />
     </key>
