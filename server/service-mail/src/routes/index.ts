@@ -3,8 +3,8 @@ import Mail from '../core/system/index';
 
 const router: Router = express.Router();
 
-router.post('/', (req: Request, res: Response, next: NextFunction) => {
-    Mail.sendMail(req.body || {})
+router.post('/registration', (req: Request, res: Response, next: NextFunction) => {
+    Mail.registrationMail(req.body || {})
         .then(data => res.json({message: "Success", data}))
         .catch(err => next(err));
 })

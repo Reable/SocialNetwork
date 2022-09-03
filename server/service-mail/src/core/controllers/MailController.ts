@@ -1,3 +1,5 @@
+import Validator from "../helpers/validator";
+
 class MailController{
 
     _mailStorage;
@@ -11,9 +13,14 @@ class MailController{
     }
 
 
-    async sendMail(data){
-        console.log(data)
-        const text = await this._mailText.testText(data.email)
+    async registrationMail(data){
+
+        const validator = new Validator();
+
+        validator.setRules('email', Validator.TYPES.string().email().required());
+        validator.validate(data);
+
+        const text = await this._mailText.registrationText(data.email)
         await this._transporterMail.sendMail(text)
     }
 }

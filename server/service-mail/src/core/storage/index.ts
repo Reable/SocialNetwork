@@ -2,13 +2,13 @@ class MailStorage {
     constructor() {
     }
 
-    async testText(email: string){
+    async registrationText(email: string){
         return {
             from: '"Ivan 👻" <reabletop@mail.ru>', // sender address
             to: email, // list of receivers
-            subject: "Hello ✔", // Subject line
-            text: "Hello world?", // plain text body
-            html: "<b>Hello world?</b>", // html body
+            subject: "Complete registration on service socialNetwork", // Subject line
+            text: "Thank for registration", // plain text body
+            html: "<b>Thank for registration</b>", // html body
         };
     }
 }

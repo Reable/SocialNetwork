@@ -15,7 +15,7 @@ class Validator {
         const schema = joi.object(this._schema);
 
         try{
-            joi.assert(data, schema, {abortEarly: false});
+            joi.assert(data, schema, { abortEarly: false });
         } catch (err: any){
             const message = err.details.map(elem => elem.message);
             throw new ValidationError(message);
