@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="589b1b71-4db6-4896-a434-5382938479b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/service-mail/src/core/helpers/validator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/service-user/src/core/services/requests.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/controllers/MailController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/controllers/MailController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/controllers/MailController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/controllers/Mail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/helpers/Interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/helpers/Interfaces.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/storage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/storage/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-mail/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/routes/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/helpers/validator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/helpers/validator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/system/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/system/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-user/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-user/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/controllers/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/controllers/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/system/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/system/User.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

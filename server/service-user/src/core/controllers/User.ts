@@ -9,10 +9,12 @@ class User {
 
     _userStorage;
     _tokenSettings;
+    _requests;
 
-    constructor(userStorage, tokenSettings) {
+    constructor(userStorage, tokenSettings, requests) {
         this._userStorage = userStorage;
         this._tokenSettings = tokenSettings;
+        this._requests = requests;
     }
 
     async authorization(data: IDataAuthorization, _headers):Promise<string> {
@@ -55,9 +57,13 @@ class User {
             throw new BadRequestError("User already exists");
         }
 
+
+        await this._requests.registrationMail(data)
+
         data.password = await bcryptjs.hash(data.password, 5);
 
         const idUser: IUser = await this._userStorage.createNewUser({ ...data, role: UserRole.USER_ROLE });
+
 
         return await this.generateToken(idUser);
     }

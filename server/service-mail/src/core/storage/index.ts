@@ -1,14 +1,28 @@
+import type { IUser } from "../helpers/Interfaces";
+
 class MailStorage {
     constructor() {
     }
 
-    async registrationText(email: string){
+    async registrationText(data: IUser ){
         return {
             from: '"Ivan 👻" <reabletop@mail.ru>', // sender address
-            to: email, // list of receivers
-            subject: "Complete registration on service socialNetwork", // Subject line
-            text: "Thank for registration", // plain text body
-            html: "<b>Thank for registration</b>", // html body
+            to: data.email,
+            subject: "Complete registration on service socialNetwork",
+            text: "Thank for registration",
+            html: `
+                <h1>${data.name} ${data.surname} благодарим за регистрацию в нашем портале</h1>
+                <table>
+                    <tr style="padding: 10px; text-center; border: 2px solid gray;">
+                        <td>Ваша почта</td>
+                        <td>Ваш пароль от аккаунта</td>
+                    </tr>
+                    <tr style="padding: 10px; text-center; border: 2px solid gray;">
+                        <td>${data.email}</td>
+                        <td>${data.password}</td>
+                    </tr>
+                </table>
+            `,
         };
     }
 }

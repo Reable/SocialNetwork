@@ -1,6 +1,6 @@
 import Validator from "../helpers/validator";
 
-class MailController{
+class Mail {
 
     _mailStorage;
     _transporterMail;
@@ -14,15 +14,20 @@ class MailController{
 
 
     async registrationMail(data){
-
         const validator = new Validator();
 
         validator.setRules('email', Validator.TYPES.string().email().required());
+        validator.setRules('name', Validator.TYPES.string().required());
+        validator.setRules('surname', Validator.TYPES.string().required());
+        validator.setRules('password', Validator.TYPES.string().required());
+
         validator.validate(data);
 
-        const text = await this._mailText.registrationText(data.email)
-        await this._transporterMail.sendMail(text)
+        const text = await this._mailText.registrationText(data);
+        await this._transporterMail.sendMail(text);
+
+        return true;
     }
 }
 
-export default MailController;
+export default Mail;

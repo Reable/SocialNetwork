@@ -1,4 +1,4 @@
-import Mail from "../controllers/MailController";
+import Mail from "../controllers/Mail";
 import MailStorage from "../storage/index";
 import SendMail from '../helpers/index';
 import MailText from "../storage/index";
