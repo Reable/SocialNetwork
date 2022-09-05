@@ -15,6 +15,11 @@ export interface IUser extends IDataRegistration{
     id: number
 }
 
+export interface IRecoveryPassword{
+    email?: string
+    phone?: string
+}
+
 export interface IConnectDatabase {
     client: string | undefined
     connection: {

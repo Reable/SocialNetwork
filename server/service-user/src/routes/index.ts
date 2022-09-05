@@ -15,4 +15,9 @@ router.post('/registration', (req:Request, res: Response, next: NextFunction) =>
         .catch(err => next(err));
 });
 
+router.post('/passwordRecovery', (req:Request, res: Response, next: NextFunction) => {
+    User.passwordRecovery(req.body || {}, req.headers || {})
+        .then(data => res.status(200).json({message: "Success", data}))
+        .catch(err => next(err));
+});
 export default router

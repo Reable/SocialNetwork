@@ -9,7 +9,7 @@ class UserStorage {
     }
 
     async findUser(data){
-        return db(UserStorage.USER_TABLE_NAME).where(data);
+        return db(UserStorage.USER_TABLE_NAME).where(data).returning('*');
     }
 
     async createNewUser(user: IDataRegistration): Promise<IUser>{
@@ -21,6 +21,12 @@ class UserStorage {
             role: user.role
         }
         return (await db(UserStorage.USER_TABLE_NAME).insert(userObject).returning('id'))[0];
+    }
+
+    async updateUser(user){
+        return db(UserStorage.USER_TABLE_NAME).where('id', user.id).update({
+            password: user.password
+        })
     }
 }
 
