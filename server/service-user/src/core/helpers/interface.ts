@@ -9,6 +9,7 @@ export interface IDataRegistration {
     name: string
     surname: string
     role: string
+    phone? :string
 }
 
 export interface IUser extends IDataRegistration{

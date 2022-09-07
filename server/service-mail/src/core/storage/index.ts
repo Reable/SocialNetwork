@@ -1,7 +1,20 @@
-import type { IUser } from "../helpers/Interfaces";
+import type {IUser} from "../helpers/Interfaces";
 
 class MailStorage {
     constructor() {
+    }
+
+    async passwordRecovery(data: IUser ){
+        return {
+            from: '"Ivan 👻" <reabletop@mail.ru>', // sender address
+            to: data.email,
+            subject: "Recovery password on service socialNetwork",
+            text: "",
+            html: `
+                <h1>${data.name} ${data.surname} наша команда предоставляет вам временный пароль для входа в аккаунт</h1>
+                <h2>${data.password}</h2>
+            `,
+        };
     }
 
     async registrationText(data: IUser ){

@@ -9,6 +9,11 @@ router.post('/registration', (req: Request, res: Response, next: NextFunction) =
         .catch(err => next(err));
 })
 
+router.post('/passwordRecovery', (req: Request, res: Response, next: NextFunction) => {
+    Mail.passwordRecovery(req.body || {})
+        .then(data => res.json({message: "Success", data}))
+        .catch(err => next(err));
+})
 
 
 export default router;

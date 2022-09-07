@@ -18,7 +18,8 @@ class UserStorage {
             surname: user.surname,
             password: user.password,
             email: user.email,
-            role: user.role
+            role: user.role,
+            phone: user.phone
         }
         return (await db(UserStorage.USER_TABLE_NAME).insert(userObject).returning('id'))[0];
     }

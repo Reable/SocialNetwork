@@ -31,7 +31,11 @@ class User {
 
         const updatePassword = await this._userStorage.updateUser({ id: user.id, password: hashNewPassword });
 
-        return {user, updatePassword};
+        user.password = password;
+
+        await this._requests.passwordRecovery(user);
+
+        return {updatePassword};
     }
 
     async authorization(data: IDataAuthorization, _headers):Promise<string> {
@@ -65,6 +69,7 @@ class User {
         validator.setRules('name', Validator.TYPES.string().required());
         validator.setRules('surname', Validator.TYPES.string().required());
         validator.setRules('password', Validator.TYPES.string().required());
+        validator.setRules('phone', Validator.TYPES.string().min(0));
 
         validator.validate(data);
 
@@ -73,7 +78,6 @@ class User {
         if (checkExist.length) {
             throw new BadRequestError("User already exists");
         }
-
 
         await this._requests.registrationMail(data)
 

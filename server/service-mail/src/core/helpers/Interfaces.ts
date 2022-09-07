@@ -7,8 +7,13 @@ export interface IUser{
 }
 
 export interface MailText {
-    from: string,
-    to: string,
-    subject: string,
+    from: string
+    to: string
+    subject: string
     html: string
+}
+
+export interface IEmailPassword{
+    email: string
+    password: string
 }
