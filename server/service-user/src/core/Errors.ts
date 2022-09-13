@@ -73,4 +73,23 @@ class InvalidCredentials extends BadRequestError {
     }
 }
 
-export { ServiceError, BadRequestError, UnAuthorized, ValidationError, InvalidCredentials }
+class SessionExpired extends BadRequestError {
+    static override STATUS_TEXT = 'Session expired';
+    static override CODE = 'SESSION_EXPIRED';
+
+    constructor(_data: any = null, _code = BadRequestError.CODE, _message = BadRequestError.STATUS_TEXT) {
+        super(_data, SessionExpired.CODE, SessionExpired.STATUS_TEXT);
+    }
+}
+
+class InsufficientRole extends UnAuthorized {
+    constructor(data = 'User role is insufficient to use this method') {
+        super(data);
+    }
+}
+
+export {
+    ServiceError, BadRequestError, UnAuthorized,
+    ValidationError, InvalidCredentials, SessionExpired,
+    InsufficientRole
+}

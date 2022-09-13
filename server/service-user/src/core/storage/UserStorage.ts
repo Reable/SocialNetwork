@@ -8,8 +8,8 @@ class UserStorage {
     constructor() {
     }
 
-    async findUser(data){
-        return db(UserStorage.USER_TABLE_NAME).where(data).returning('*');
+    async findUser(data, select: '*'): Promise<IUser[]>{
+        return db(UserStorage.USER_TABLE_NAME).select(select).where(data);
     }
 
     async createNewUser(user: IDataRegistration): Promise<IUser>{

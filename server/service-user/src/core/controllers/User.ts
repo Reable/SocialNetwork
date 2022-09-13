@@ -1,8 +1,8 @@
 import type {IDataAuthorization, IDataRegistration, IRecoveryPassword, IUser} from "../helpers/interface";
 import jwt from "jsonwebtoken";
-import {UserRole} from "../helpers/Enums";
+import {HEADERS, UserRole} from "../helpers/Enums";
 import Validator from "../helpers/validator";
-import { BadRequestError, InvalidCredentials, UnAuthorized } from "../Errors";
+import {BadRequestError, InsufficientRole, InvalidCredentials, SessionExpired, UnAuthorized} from "../Errors";
 import bcryptjs from "bcryptjs";
 
 class User {
@@ -11,14 +11,55 @@ class User {
     _tokenSettings;
     _requests;
 
+    static ROLES: any = {
+        "user": UserRole.USER_ROLE,
+        "admin": UserRole.ADMIN_ROLE,
+        "developer": UserRole.DEVELOPER_ROLE,
+    }
+
     constructor(userStorage, tokenSettings, requests) {
         this._userStorage = userStorage;
         this._tokenSettings = tokenSettings;
         this._requests = requests;
     }
 
+    async whoami(data, headers): Promise<IUser>{
+        if (!headers[HEADERS.AuthTokenName] && !data.token){
+            throw new UnAuthorized('User is not authorization');
+        }
+
+        data.token = headers[HEADERS.AuthTokenName]?.split(' ')[1] || data.token;
+
+        let validator = new Validator();
+
+        validator.setRules('token', Validator.TYPES.string().required());
+        validator.setRules('roles', Validator.TYPES.array().required());
+
+        validator.validate(data);
+
+        const decodedToken = await this.verifyToken(data.token);
+
+        if (Date.now() / 1000 > decodedToken.exp) {
+            throw new SessionExpired('Session expired');
+        }
+
+        const [user]: [IUser] = await this._userStorage.findUser({id: decodedToken.id})
+
+        const rolesSuccess: any = [];
+
+        for (let role of data.roles){
+            rolesSuccess.push(User.ROLES[role]);
+        }
+
+        if (!rolesSuccess.includes(user.role)){
+            throw new InsufficientRole();
+        }
+
+        return user;
+    }
+
     async passwordRecovery(data: IRecoveryPassword, _headers){
-        const [user] = data.email
+        const [user]: [IUser] = data.email
             ? await this._userStorage.findUser({ email: data.email })
             : await this._userStorage.findUser({ phone: data.phone })
 
@@ -46,7 +87,7 @@ class User {
 
         validator.validate(data)
 
-        const [user] = await this._userStorage.findUser({email: data.email});
+        const [user]: [IUser] = await this._userStorage.findUser({email: data.email});
 
         if(!user) {
             throw new InvalidCredentials("No user with specified email found");
@@ -58,7 +99,7 @@ class User {
             throw new UnAuthorized('You entered the wrong account password')
         }
 
-        return await this.generateToken(user.id);
+        return await this.generateToken(user);
     }
 
     async registration(data: IDataRegistration, _headers): Promise<string> {
@@ -89,9 +130,9 @@ class User {
         return await this.generateToken(idUser);
     }
 
-    async generateToken(idUser: IUser):Promise<string> {
+    async generateToken(user: IUser):Promise<string> {
         return jwt.sign(
-            { id: idUser },
+            { ...user },
             await this._tokenSettings.JWT_KEY,
             { expiresIn: this._tokenSettings.JWT_LIFE }
         );

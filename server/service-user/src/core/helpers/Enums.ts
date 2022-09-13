@@ -3,3 +3,7 @@ export enum UserRole {
     ADMIN_ROLE = "admin",
     DEVELOPER_ROLE = "developer"
 }
+
+export enum HEADERS {
+    AuthTokenName = "authorization"
+}
