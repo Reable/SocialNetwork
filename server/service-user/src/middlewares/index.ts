@@ -9,7 +9,7 @@ export function notFound(req: Request, res:Response, next:NextFunction){
 }
 
 export function onlyRoles(roles: string[],){
-    return async function (req: Request, _res: Response, next: NextFunction) {
+    return async function (req: any, _res: Response, next: NextFunction) {
         try{
             req.user = await User.whoami({roles}, req.headers);
         } catch (err){
