@@ -6,12 +6,6 @@
       <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/controllers/Mail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/controllers/Mail.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/helpers/Interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/helpers/Interfaces.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/storage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/storage/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-mail/src/core/system/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/core/system/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-mail/src/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-mail/src/routes/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/controllers/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/controllers/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/helpers/interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/helpers/interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/services/requests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/services/requests.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/service-user/src/core/storage/UserStorage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/service-user/src/core/storage/UserStorage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -23,7 +23,6 @@ class Mail {
         validator.setRules('password', Validator.TYPES.string().required());
 
         validator.validate(data);
-
         const text = await this._mailStorage.passwordRecovery(data);
         await this._transporterMail.sendMail(text);
 
@@ -43,7 +42,6 @@ class Mail {
         validator.validate(data);
 
         const text = await this._mailStorage.registrationText(data);
-        console.log(text)
         await this._transporterMail.sendMail(text);
 
         return true;
