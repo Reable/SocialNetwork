@@ -28,4 +28,4 @@ router.post('/whoami', (req: Request, res: Response, next: NextFunction) => {
         .catch(err => next(err));
 })
 
-export default router
+export default router;
