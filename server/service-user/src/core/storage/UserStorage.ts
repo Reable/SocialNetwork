@@ -1,15 +1,13 @@
-import type { IDataRegistration, IUser } from "../helpers/interface";
+import type { IDataRegistration, IUser } from "../helpers/User/interface";
 import db from "../services/database";
+import {DB_USER} from "../helpers/Enums";
 
 class UserStorage {
-
-    static USER_TABLE_NAME = "users";
-
     constructor() {
     }
 
     async findUser(data, select: '*'): Promise<IUser[]>{
-        return db(UserStorage.USER_TABLE_NAME).select(select).where(data);
+        return db(DB_USER.USER_TABLE_NAME).select(select).where(data);
     }
 
     async createNewUser(user: IDataRegistration): Promise<IUser>{
@@ -21,11 +19,11 @@ class UserStorage {
             role: user.role,
             phone: user.phone
         }
-        return (await db(UserStorage.USER_TABLE_NAME).insert(userObject).returning('id'))[0];
+        return (await db(DB_USER.USER_TABLE_NAME).insert(userObject).returning('id'))[0];
     }
 
     async updateUser(user){
-        return db(UserStorage.USER_TABLE_NAME).where('id', user.id).update({
+        return db(DB_USER.USER_TABLE_NAME).where('id', user.id).update({
             password: user.password
         })
     }

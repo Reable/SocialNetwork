@@ -1,4 +1,4 @@
-import type {IDataAuthorization, IDataRegistration, IRecoveryPassword, IUser} from "../helpers/interface";
+import type {IDataAuthorization, IDataRegistration, IRecoveryPassword, IUser} from "../helpers/User/interface";
 import jwt from "jsonwebtoken";
 import {HEADERS, UserRole} from "../helpers/Enums";
 import Validator from "../helpers/validator";
@@ -58,7 +58,7 @@ class User {
         return user;
     }
 
-    async passwordRecovery(data: IRecoveryPassword, _headers){
+    async passwordRecovery(data: IRecoveryPassword){
         const [user]: [IUser] = data.email
             ? await this._userStorage.findUser({ email: data.email })
             : await this._userStorage.findUser({ phone: data.phone })
@@ -79,7 +79,7 @@ class User {
         return {updatePassword};
     }
 
-    async authorization(data: IDataAuthorization, _headers):Promise<string> {
+    async authorization(data: IDataAuthorization):Promise<string> {
         const validator = new Validator();
 
         validator.setRules('email', Validator.TYPES.string().required());
@@ -102,7 +102,7 @@ class User {
         return await this.generateToken(user);
     }
 
-    async registration(data: IDataRegistration, _headers): Promise<string> {
+    async registration(data: IDataRegistration): Promise<string> {
 
         const validator = new Validator();
 

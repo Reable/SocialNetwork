@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import type { IConnectDatabase } from "./core/helpers/interface";
+import type { IConnectDatabase } from "./core/helpers/User/interface";
 
 dotenv.config()
 

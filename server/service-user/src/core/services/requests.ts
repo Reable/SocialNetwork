@@ -1,5 +1,5 @@
 import axios from "axios";
-import type {IUser} from "../helpers/interface";
+import type {IUser} from "../helpers/User/interface";
 
 class Requests {
 

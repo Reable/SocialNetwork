@@ -15,8 +15,11 @@ app.use(express.json());
 
 
 //Routes
-import Routes from "./routes/index";
-app.use('/api/user', Routes);
+import UserRouter from "./routes/UserRouter";
+app.use('/api/user', UserRouter);
+
+import MessageRouter from "./routes/MessageRouter";
+app.use('/api/message', MessageRouter);
 
 
 app.use(notFound);
