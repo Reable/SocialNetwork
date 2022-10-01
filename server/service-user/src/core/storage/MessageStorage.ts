@@ -1,17 +1,20 @@
-import type {DBCreateChat} from "../helpers/Message/interface";
+import type {DBCreateChat, IChat} from "../helpers/Message/interface";
 import db from '../services/database'
 import {DB_MESSAGE} from "../helpers/Enums";
 
 class MessageStorage{
 
-    async create(data:DBCreateChat){
+    async createChat(chat:DBCreateChat): Promise<IChat>{
+        console.log(chat)
         const createChat = {
-            author_id: data.user.id,
-            title: data.chat.title,
-            image: data.chat.image || '',
-            close: data.chat.close
+            author_id: chat.user.id,
+            title: chat.data.title,
+            image: chat.data.image || 'NonePhoto.png',
+            close: chat.data.close,
+            created_at: Math.round(Date.now() / 1000),
+            updated_at: Math.round(Date.now() / 1000)
         }
-        return db(DB_MESSAGE.CHAT).insert(createChat)
+        return db(DB_MESSAGE.CHATS).insert(createChat);
     }
 
 }

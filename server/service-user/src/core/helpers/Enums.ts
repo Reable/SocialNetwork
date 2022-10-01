@@ -13,7 +13,7 @@ export enum DB_USER {
 }
 
 export enum DB_MESSAGE {
-    CHAT = "chat",
+    CHATS = "chats",
     CHAT_MEMBERS = "chat_members",
     PRIVATE_MESSAGE = "private_messages",
 }

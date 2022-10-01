@@ -24,6 +24,6 @@ export interface IUpdateChat {
 }
 
 export interface DBCreateChat {
-    chat: IDataCreateChat,
+    data: IDataCreateChat,
     user: IUser
 }
