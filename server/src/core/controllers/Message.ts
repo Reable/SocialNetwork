@@ -1,5 +1,5 @@
 import type {IUser} from "../helpers/User/interface";
-import type {IChat, IDataCreateChat} from '../helpers/Message/interface';
+import type {IChat, ICreatePrivateChat, IDataCreateChat} from '../helpers/Message/interface';
 import Validator from "../helpers/validator";
 
 class Message {
@@ -21,6 +21,10 @@ class Message {
 
         const [createChat]: [IChat] = await this._messageStorage.createChat({data,user})
         return createChat;
+    }
+
+    async createPrivateChat(_data:ICreatePrivateChat ){
+
     }
 
 }

@@ -1,5 +1,5 @@
 import express, {NextFunction, Request, Response, Router} from "express";
-import Mail from '../core/system/index';
+import Mail from '../core/system/Mail';
 
 const router: Router = express.Router();
 

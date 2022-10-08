@@ -4,12 +4,12 @@ import {HEADERS, UserRole} from "../helpers/Enums";
 import Validator from "../helpers/validator";
 import {BadRequestError, InsufficientRole, InvalidCredentials, SessionExpired, UnAuthorized} from "../Errors";
 import bcryptjs from "bcryptjs";
+import Mail from "../system/Mail";
 
 class User {
 
     _userStorage;
     _tokenSettings;
-    _requests;
 
     static ROLES: any = {
         "user": UserRole.USER_ROLE,
@@ -17,10 +17,9 @@ class User {
         "developer": UserRole.DEVELOPER_ROLE,
     }
 
-    constructor(userStorage, tokenSettings, requests) {
+    constructor(userStorage, tokenSettings) {
         this._userStorage = userStorage;
         this._tokenSettings = tokenSettings;
-        this._requests = requests;
     }
 
     async whoami(data, headers): Promise<IUser>{
@@ -74,7 +73,7 @@ class User {
 
         user.password = password;
 
-        await this._requests.passwordRecovery(user);
+        await Mail.passwordRecovery(user);
 
         return {updatePassword};
     }
@@ -103,7 +102,6 @@ class User {
     }
 
     async registration(data: IDataRegistration): Promise<string> {
-
         const validator = new Validator();
 
         validator.setRules('email', Validator.TYPES.string().required());
@@ -120,7 +118,7 @@ class User {
             throw new BadRequestError("User already exists");
         }
 
-        await this._requests.registrationMail(data)
+        await Mail.registrationMail(data);
 
         data.password = await bcryptjs.hash(data.password, 5);
 

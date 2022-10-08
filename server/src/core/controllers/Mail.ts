@@ -1,5 +1,5 @@
 import Validator from "../helpers/validator";
-import type {IUser} from "../helpers/Interfaces";
+import type {IUser} from "../helpers/Mail/interface";
 
 class Mail {
 

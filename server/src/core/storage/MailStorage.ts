@@ -1,4 +1,4 @@
-import type {IUser} from "../helpers/Interfaces";
+import type { IUser } from "../helpers/Mail/interface";
 
 class MailStorage {
     constructor() {
