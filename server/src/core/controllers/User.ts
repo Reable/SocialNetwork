@@ -124,7 +124,6 @@ class User {
 
         const idUser: IUser = await this._userStorage.createNewUser({ ...data, role: UserRole.USER_ROLE });
 
-
         return await this.generateToken(idUser);
     }
 
