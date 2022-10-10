@@ -1,5 +1,5 @@
 import Validator from "../helpers/validator";
-import type {IUser} from "../helpers/Mail/interface";
+import type {IUser} from "../helpers/User/interface";
 
 class Mail {
 
@@ -11,7 +11,7 @@ class Mail {
         this._transporterMail = transporterMail;
     }
 
-    async passwordRecovery(data: IUser):Promise<boolean> {
+    async passwordRecovery(user: IUser):Promise<boolean> {
         const validator = new Validator();
 
         validator.setRules('id', Validator.TYPES.number().required());
@@ -22,8 +22,8 @@ class Mail {
         validator.setRules('phone', Validator.TYPES.string().min(0));
         validator.setRules('password', Validator.TYPES.string().required());
 
-        validator.validate(data);
-        const text = await this._mailStorage.passwordRecovery(data);
+        validator.validate(user);
+        const text = await this._mailStorage.passwordRecovery(user);
         await this._transporterMail.sendMail(text);
 
         return true;
