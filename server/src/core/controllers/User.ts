@@ -54,6 +54,8 @@ class User {
             throw new InsufficientRole();
         }
 
+        delete user.password;
+
         return user;
     }
 

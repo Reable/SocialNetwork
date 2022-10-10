@@ -88,8 +88,23 @@ class InsufficientRole extends UnAuthorized {
     }
 }
 
+class UserNotFound extends UnAuthorized {
+    constructor(data = 'User not found') {
+        super(data);
+    }
+}
+
+class AlreadyExists extends BadRequestError {
+    static override STATUS_TEXT = ' already exists';
+    static override CODE = 'ALREADY_EXISTS';
+
+    constructor(_data: any = null, _code = BadRequestError.CODE, _message = BadRequestError.STATUS_TEXT) {
+        super(_data + AlreadyExists.STATUS_TEXT, AlreadyExists.CODE, SessionExpired.STATUS_TEXT);
+    }
+}
+
 export {
     ServiceError, BadRequestError, UnAuthorized,
     ValidationError, InvalidCredentials, SessionExpired,
-    InsufficientRole
+    InsufficientRole, AlreadyExists, UserNotFound
 }

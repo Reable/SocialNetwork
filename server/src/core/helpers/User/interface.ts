@@ -5,7 +5,7 @@ export interface IDataAuthorization {
 
 export interface IDataRegistration {
     email: string
-    password: string
+    password?: string
     name: string
     surname: string
     role: string

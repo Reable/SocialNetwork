@@ -36,11 +36,15 @@ export interface ICreatePrivateChat {
     user_id: number
 }
 
+export interface DBCreatePrivateChat extends ICreatePrivateChat{
+    author_id: number
+}
+
 export interface IPrivateChat {
-    id: number
+    id?: number
     author_id: number
     user_id: number
     on_delete: number
-    created_at: number
-    updated_at: number
+    created_at?: number
+    updated_at?: number
 }
