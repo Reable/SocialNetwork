@@ -48,3 +48,8 @@ export interface IPrivateChat {
     created_at?: number
     updated_at?: number
 }
+
+export interface IPrivateMessage {
+    private_chat_id: number
+    message: string
+}

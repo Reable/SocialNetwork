@@ -3,7 +3,7 @@ import type {
     DBCreatePrivateChat,
     IChat,
     IDataCreateChat,
-    IPrivateChat
+    IPrivateChat, IPrivateMessage
 } from '../helpers/Message/interface';
 import Validator from "../helpers/validator";
 import {UserNotFound} from "../Errors";
@@ -38,8 +38,7 @@ class Message {
 
         validator.validate(data);
 
-        const searchUser = await this._userStorage.findUser({id: data.user_id});
-        console.log(searchUser);
+        const [searchUser] = await this._userStorage.findUser({id: data.user_id});
         if(!searchUser){
             throw new UserNotFound();
         }
@@ -49,6 +48,10 @@ class Message {
         const [createPrivateChat]: [IPrivateChat] = await this._messageStorage.createPrivateChatDB(data);
         console.log(createPrivateChat.id)
         return createPrivateChat;
+    }
+
+    async createPrivateMessage (data: IPrivateMessage, user: IUser) {
+        return {data, user};
     }
 
 }

@@ -88,9 +88,12 @@ class InsufficientRole extends UnAuthorized {
     }
 }
 
-class UserNotFound extends UnAuthorized {
-    constructor(data = 'User not found') {
-        super(data);
+class UserNotFound extends BadRequestError {
+    static override STATUS_TEXT = 'User not found';
+    static override CODE = 'USER_NOT_FOUND';
+
+    constructor(_data: any = UserNotFound.STATUS_TEXT, _code = BadRequestError.CODE, _message = BadRequestError.STATUS_TEXT) {
+        super(_data, UserNotFound.CODE, UserNotFound.STATUS_TEXT);
     }
 }
 
