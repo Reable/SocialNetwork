@@ -1,12 +1,14 @@
 import type {IUser} from "../helpers/User/interface";
 import type {
+    CreateMessage,
     DBCreatePrivateChat,
     IChat,
     IDataCreateChat,
-    IPrivateChat, IPrivateMessage
+    IPrivateChat
 } from '../helpers/Message/interface';
 import Validator from "../helpers/validator";
-import {UserNotFound} from "../Errors";
+import {PrivateChatNotFound, UserNotFound, YouNotMemberThisChat} from "../Errors";
+import {ActiveChat} from "../helpers/Message/enums";
 
 class Message {
 
@@ -39,6 +41,7 @@ class Message {
         validator.validate(data);
 
         const [searchUser] = await this._userStorage.findUser({id: data.user_id});
+
         if(!searchUser){
             throw new UserNotFound();
         }
@@ -46,12 +49,35 @@ class Message {
         data.author_id = user.id;
 
         const [createPrivateChat]: [IPrivateChat] = await this._messageStorage.createPrivateChatDB(data);
-        console.log(createPrivateChat.id)
+
         return createPrivateChat;
     }
 
-    async createPrivateMessage (data: IPrivateMessage, user: IUser) {
-        return {data, user};
+    async createPrivateMessage (data: CreateMessage, user: IUser): Promise<number> {
+
+        const validator = new Validator();
+
+        validator.setRules('chat_id', Validator.TYPES.number().required());
+        validator.setRules('message', Validator.TYPES.string().required());
+
+        validator.validate(data);
+
+        const [searchPrivateChat]: [IPrivateChat] = await this._messageStorage.searchPrivateChat({
+            id: data.chat_id,
+            active: ActiveChat.CREATED
+        });
+
+        if(!searchPrivateChat) {
+            throw new PrivateChatNotFound();
+        }
+
+        if(searchPrivateChat.user_id !== user.id && searchPrivateChat.author_id !== user.id){
+            throw new YouNotMemberThisChat();
+        }
+
+        data.author_id = user.id;
+
+        return await this._messageStorage.createMessage(data);
     }
 
 }

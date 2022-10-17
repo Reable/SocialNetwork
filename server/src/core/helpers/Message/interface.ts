@@ -44,12 +44,19 @@ export interface IPrivateChat {
     id?: number
     author_id: number
     user_id: number
-    on_delete: number
+    active: number
     created_at?: number
     updated_at?: number
 }
 
-export interface IPrivateMessage {
-    private_chat_id: number
-    message: string
+export interface SearchChat {
+    user_id?: number;
+    id: number | undefined;
+    active?: number
+}
+
+export interface CreateMessage {
+    author_id?: number;
+    chat_id?: number;
+    message: string;
 }

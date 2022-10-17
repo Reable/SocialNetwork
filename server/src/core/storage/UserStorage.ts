@@ -19,7 +19,7 @@ class UserStorage {
             role: user.role,
             phone: user.phone
         }
-        return (await db(DB_USER.USER_TABLE_NAME).insert(userObject).returning('id'))[0];
+        return await db(DB_USER.USER_TABLE_NAME).insert(userObject)
     }
 
     async updateUser(user){

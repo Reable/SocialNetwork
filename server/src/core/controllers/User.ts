@@ -100,6 +100,8 @@ class User {
             throw new UnAuthorized('You entered the wrong account password')
         }
 
+        delete user.password;
+
         return await this.generateToken(user);
     }
 
@@ -124,9 +126,13 @@ class User {
 
         data.password = await bcryptjs.hash(data.password, 5);
 
-        const idUser: IUser = await this._userStorage.createNewUser({ ...data, role: UserRole.USER_ROLE });
+        const userId: IUser = await this._userStorage.createNewUser({ ...data, role: UserRole.USER_ROLE });
 
-        return await this.generateToken(idUser);
+        const user: IUser = await this._userStorage.findUser({id: userId});
+
+        delete user.password;
+
+        return await this.generateToken(user);
     }
 
     async generateToken(user: IUser):Promise<string> {

@@ -19,7 +19,7 @@ import UserRouter from "./routes/UserRouter";
 app.use('/api/user', UserRouter);
 
 import MessageRouter from "./routes/MessageRouter";
-app.use('/api/message', MessageRouter);
+app.use('/api/chats', MessageRouter);
 
 
 app.use(notFound);

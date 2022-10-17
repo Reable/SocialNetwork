@@ -4,7 +4,6 @@ import {MailData} from "../../config";
 class transporterMail {
     async sendMail(data) {
         try {
-            console.log(MailData)
             const transporter: nodemailer = nodemailer.createTransport({
                 host: "smtp.mail.ru",
                 port: 465,
