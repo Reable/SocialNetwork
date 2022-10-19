@@ -3,6 +3,7 @@ import MyInput from "../../components/UI/MyInput/MyInput";
 import { SERVER } from "../../Constants";
 import './Auth.css'
 import axios from "axios";
+import MyButton from "../../components/UI/MyButton/MyButton";
 
 const RegisterPage = () => {
 
@@ -26,9 +27,6 @@ const RegisterPage = () => {
       })
   }
 
-  async function errorsValidate(error){
-
-  }
 
   return (
     <div className={'register'}>
@@ -64,7 +62,7 @@ const RegisterPage = () => {
             onChange={e => setData({...data, password: e.target.value})}
           />
 
-          <button type={'submit'}>Регистрация</button>
+          <MyButton>Регистрация</MyButton>
 
         </form>
       </div>
