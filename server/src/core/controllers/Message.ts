@@ -1,5 +1,6 @@
 import type {IUser} from "../helpers/User/interface";
 import type {
+    AddMemberWithChat,
     CreateMessage,
     DBCreatePrivateChat,
     IChat,
@@ -31,6 +32,10 @@ class Message {
 
         const [createChat]: [IChat] = await this._messageStorage.createChatDB({data,user})
         return createChat;
+    }
+
+    async addMemberWithChat(_data: AddMemberWithChat, _user: IUser){
+
     }
 
     async createPrivateChat(data:DBCreatePrivateChat, user: IUser ): Promise<IPrivateChat>{

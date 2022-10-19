@@ -1,7 +1,7 @@
 import express, {Express, Request} from "express";
 import http from "http";
 import httpErrorHandler from "http-errors-express";
-
+import cors from 'cors';
 //Middlewares
 import { notFound } from "./middlewares";
 
@@ -13,6 +13,7 @@ dotenv.config({
 const app: Express = express();
 app.use(express.json());
 
+app.use(cors())
 
 //Routes
 import UserRouter from "./routes/UserRouter";
@@ -39,8 +40,8 @@ app.use(
     })
 );
 
-const PORT: string | number = process.env.PORT || 3000;
+const PORT: string | number = process.env.PORT || 3001;
 
 http.createServer(app).listen(PORT, ()=>{
-    console.log(`Server service-user is running on port 3000`);
+    console.log(`Server service-user is running on port ${PORT}`);
 });

@@ -25,6 +25,11 @@ export interface IUpdateChat {
     image?: string
 }
 
+export interface AddMemberWithChat {
+    user_id: number;
+    chat_id: number;
+}
+
 export interface DBCreateChat {
     data: IDataCreateChat,
     user: IUser

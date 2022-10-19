@@ -34,7 +34,7 @@ class MessageStorage{
         return db(DB_MESSAGE.PRIVATE_CHAT).insert(createPrivateChat);
     }
 
-    async searchPrivateChat(where:SearchChat , fields: [string] = ['*'], orderBy: [string] = ['id']){
+    async searchPrivateChat(where: SearchChat , fields: [string] = ['*'], orderBy: [string] = ['id']){
         return db(DB_MESSAGE.PRIVATE_CHAT).where(where).select(fields).orderBy(orderBy);
     }
 
