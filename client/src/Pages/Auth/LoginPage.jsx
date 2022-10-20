@@ -49,8 +49,7 @@ const LoginPage = () => {
           setErrorsValidate({...errorsValidate, password: false})
         }
         break;
-      default:
-        break
+      default: break
     }
   }
 
@@ -62,6 +61,7 @@ const LoginPage = () => {
       case "password":
         setInputDirty({...inputDirty, password: true})
         break;
+      default: break
     }
   }
 

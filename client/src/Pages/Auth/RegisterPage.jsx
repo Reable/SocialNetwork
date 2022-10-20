@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import MyInput from "../../components/UI/MyInput/MyInput";
-import { SERVER } from "../../Constants";
 import './Auth.css'
-import axios from "axios";
+import MyInput from "../../components/UI/MyInput/MyInput";
+// import { SERVER } from "../../Constants";
+// import axios from "axios";
 import MyButton from "../../components/UI/MyButton/MyButton";
 
 const RegisterPage = () => {
@@ -92,6 +92,7 @@ const RegisterPage = () => {
           setErrorsValidate({...errorsValidate, password: false})
         }
         break;
+      default: break
     }
   }
 
@@ -109,6 +110,7 @@ const RegisterPage = () => {
       case "password":
         setInputDirty({...inputDirty, password: true})
         break;
+      default: break
     }
   }
 
