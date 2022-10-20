@@ -1,9 +1,12 @@
 import React from 'react';
 import './MyInput.css'
 
-const MyInput = (props) => {
+const MyInput = ({image_link, ...props}) => {
   return (
-    <input {...props} />
+    <label>
+      {image_link && <img src={ image_link } alt=""/>}
+      <input {...props} />
+    </label>
   );
 };
 

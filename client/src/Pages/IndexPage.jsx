@@ -6,10 +6,10 @@ const IndexPage = () => {
   return (
     <div className={'index'}>
       <nav>
-        <Link to={'/registration'}>
+        <Link className={'indexPage'} to={'/login'}>
             <h2>Авторизация</h2>
         </Link>
-        <Link to={'/registration'}>
+        <Link className={'indexPage'} to={'/registration'}>
           <h2>Регистрация</h2>
         </Link>
       </nav>
