@@ -1,168 +1,86 @@
-import React, {useState} from 'react';
-import './Auth.css'
+import React, {useState, useEffect} from 'react';
+import './Auth.css';
 import MyInput from "../../components/UI/MyInput/MyInput";
-// import { SERVER } from "../../Constants";
-// import axios from "axios";
 import MyButton from "../../components/UI/MyButton/MyButton";
+import {Link} from "react-router-dom";
+import useInput from "../../helpers/useInput";
 
 const RegisterPage = () => {
 
-  const [data, setData] = useState({
-    name: '',
-    surname: '',
-    email: '',
-    password: ''
-  });
+  const data = {
+    name: useInput('', {minLength: 2, isEmpty: true, maxLength: 25}),
+    surname: useInput('', {minLength: 3, isEmpty: true, maxLength: 25}),
+    email: useInput('', {minLength: 6, isEmpty: true, isEmail: true}),
+    password: useInput('', {minLength: 6, isEmpty: true})
+  }
 
-  const [errorsValidate, setErrorsValidate] = useState({
-    name: 'Поле имени не может быть пустым',
-    surname: 'Поле фамилии не может быть пустым',
-    email: 'Поле почты не может быть пустым',
-    password: 'Поле пароля не может быть пустым'
-  });
-
-  const [inputDirty, setInputDirty] = useState({
-    name: false,
-    surname: false,
-    email: false,
-    password: false
-  });
-
-  async function registrationForm(event){
+  function registrationForm(event) {
     event.preventDefault()
     console.log(data)
-    // await axios.post(SERVER + '/api/user/registration', data )
-    //   .then(res => console.log(res))
-    //   .catch(err => {
-    //     // const status = err.response.status;
-    //     const errors = err.response.data.error.message;
-    //     errors.forEach(elem => {
-    //       console.log(elem.split('"'));
-    //     })
-    //   })
   }
 
-  function valueForData(e){
-    let valueInput = e.target.value;
-    switch(e.target.name) {
-      case "name":
-        setData({...data, name: valueInput})
-        if(!valueInput || valueInput.length < 2) {
-          setErrorsValidate({...errorsValidate, name: 'Имя должно быть не меньше 2-х символов'})
-          if(!valueInput){
-            setErrorsValidate({...errorsValidate, name: 'Поле имени не может быть пустым'})
-          }
-        } else {
-          setErrorsValidate({...errorsValidate, name: false})
-        }
-
-        break;
-      case "surname":
-        setData({...data, surname: valueInput})
-        if(valueInput.length < 2 ) {
-          setErrorsValidate({...errorsValidate, surname: 'Фамилия должно быть не меньше 2-х символов'})
-          if(!valueInput){
-            setErrorsValidate({...errorsValidate, surname: 'Поле фамилии не может быть пустым'})
-          }
-        } else {
-          setErrorsValidate({...errorsValidate, surname: false})
-        }
-        break;
-      case "email":
-        setData({...data, email: valueInput})
-        const regex = String(valueInput).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
-        if(!regex && inputDirty.email){
-          setErrorsValidate({...errorsValidate, email: 'Введена некорректная почта'})
-          if(!valueInput){
-            setErrorsValidate({...errorsValidate, email: 'Поле почты не может быть пустым'})
-          }
-        } else {
-          setErrorsValidate({...errorsValidate, email: false})
-        }
-
-        break;
-      case "password":
-        setData({...data, password: valueInput})
-        if(valueInput.length < 5 || valueInput.length > 15) {
-          setErrorsValidate({...errorsValidate, password: 'Пароль должен быть не меньше 5-ти и не больше 15 символов'})
-          if(!valueInput){
-            setErrorsValidate({...errorsValidate, password: 'Поле пароля не может быть пустым'})
-          }
-        } else {
-          setErrorsValidate({...errorsValidate, password: false})
-        }
-        break;
-      default: break
-    }
-  }
-
-  function blurHandler(e){
-    switch(e.target.name){
-      case "name":
-        setInputDirty({...inputDirty, name: true})
-        break;
-      case "surname":
-        setInputDirty({...inputDirty, surname: true})
-        break;
-      case "email":
-        setInputDirty({...inputDirty, email: true})
-        break;
-      case "password":
-        setInputDirty({...inputDirty, password: true})
-        break;
-      default: break
-    }
-  }
 
   return (
     <div className={'register'}>
       <div className={'block'}>
         <h2>Добро пожаловать</h2>
-        <form onSubmit={registrationForm} method={'POST'}>
+        <form method={'POST'}>
 
-          {(errorsValidate.name && inputDirty.name) && <p style={{color: 'red'}}>{ errorsValidate.name }</p>}
+          { (data.name.isDirty && data.name.isEmpty.value) && <p style={{color: 'red'}}>{ data.name.isEmpty.message }</p> }
+          { (data.name.isDirty && data.name.minLength.value) && <p style={{color: 'red'}}>{ data.name.minLength.message }</p> }
+          { (data.name.isDirty && data.name.maxLength.value) && <p style={{color: 'red'}}>{ data.name.maxLength.message }</p> }
           <MyInput
-            onBlur={e => blurHandler(e)}
             type='text'
             placeholder='name'
             name={'name'}
-            value={data.name}
-            onChange={e => valueForData(e)}
+            value={data.name.value}
+            onChange={e => data.name.onChange(e)}
+            onBlur={e => data.name.onBlur(e)}
           />
 
-          {(errorsValidate.surname && inputDirty.surname) && <p style={{color: 'red'}}>{ errorsValidate.surname }</p>}
+          { (data.surname.isDirty && data.surname.isEmpty.value) && <p style={{color: 'red'}}>{ data.surname.isEmpty.message }</p> }
+          { (data.surname.isDirty && data.surname.minLength.value) && <p style={{color: 'red'}}>{ data.surname.minLength.message }</p> }
+          { (data.surname.isDirty && data.surname.maxLength.value) && <p style={{color: 'red'}}>{ data.surname.maxLength.message }</p> }
           <MyInput
-            onBlur={e => blurHandler(e)}
             type='text'
             placeholder='surname'
             name={'surname'}
-            value={data.surname}
-            onChange={e => valueForData(e)}
+            value={data.surname.value}
+            onChange={e => data.surname.onChange(e)}
+            onBlur={e => data.surname.onBlur(e)}
           />
 
-          {(errorsValidate.email && inputDirty.email)  && <p style={{color: 'red'}}>{ errorsValidate.email }</p>}
+          { ( data.email.isDirty && data.email.isEmpty.value ) && <p style={{color: 'red'}}>{ data.email.isEmpty.message }</p> }
+          { ( data.email.isDirty && data.email.emailError.value ) && <p style={{color: 'red'}}>{ data.email.emailError.message }</p> }
+          { ( data.email.isDirty && data.email.minLength.value ) && <p style={{color: 'red'}}>{ data.email.minLength.message }</p> }
           <MyInput
-            onBlur={e => blurHandler(e)}
             type='text'
             placeholder='email'
             name={'email'}
-            value={data.email}
-            onChange={e => valueForData(e)}
+            value={data.email.value}
+            onChange={data.email.onChange}
+            onBlur={data.email.onBlur}
           />
 
-          {(errorsValidate.password && inputDirty.password)  && <p style={{color: 'red'}}>{ errorsValidate.password }</p>}
+          { (data.password.isDirty && data.password.isEmpty.value) && <p style={{color: 'red'}}>{ data.password.isEmpty.message }</p> }
+          { (data.password.isDirty && data.password.minLength.value) && <p style={{color: 'red'}}>{ data.password.minLength.message }</p> }
           <MyInput
-            onBlur={e => blurHandler(e)}
             type='text'
             placeholder='password'
             name={'password'}
-            value={data.password}
-            onChange={e => valueForData(e)}
+            value={data.password.value}
+            onChange={data.password.onChange}
+            onBlur={data.password.onBlur}
           />
 
-          <MyButton>Регистрация</MyButton>
+          <MyButton onClick={registrationForm}>Регистрация</MyButton>
 
         </form>
+
+        <div className={'flex'}>
+          <Link to={'/'} className={'backIndexPage'}>Назад</Link>
+          <Link to={'/login'} className={'backIndexPage'}>Войти</Link>
+        </div>
       </div>
     </div>
   );

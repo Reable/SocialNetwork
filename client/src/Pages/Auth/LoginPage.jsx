@@ -4,66 +4,14 @@ import MyButton from "../../components/UI/MyButton/MyButton";
 
 import './Auth.css'
 import {Link} from "react-router-dom";
+import useInput from "../../helpers/useInput";
 
 const LoginPage = () => {
 
-  const [data, setData] = useState({
-    email: '',
-    password: ''
-  });
-
-  const [errorsValidate, setErrorsValidate] = useState({
-    email: 'Поле почты не может быть пустым',
-    password: 'Поле пароля не может быть пустым'
-  });
-
-  const [inputDirty, setInputDirty] = useState({
-    email: false,
-    password: false
-  });
-
-  function valueForData(e){
-    let valueInput = e.target.value;
-    switch(e.target.name) {
-      case "email":
-        setData({...data, email: valueInput})
-        const regex = String(valueInput).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
-        if(!regex && inputDirty.email){
-          setErrorsValidate({...errorsValidate, email: 'Введена некорректная почта'})
-          if(!valueInput){
-            setErrorsValidate({...errorsValidate, email: 'Поле почты не может быть пустым'})
-          }
-        } else {
-          setErrorsValidate({...errorsValidate, email: false})
-        }
-
-        break;
-      case "password":
-        setData({...data, password: valueInput})
-        if(valueInput.length < 5 || valueInput.length > 15) {
-          setErrorsValidate({...errorsValidate, password: 'Пароль должен быть не меньше 5-ти и не больше 15 символов'})
-          if(!valueInput){
-            setErrorsValidate({...errorsValidate, password: 'Поле пароля не может быть пустым'})
-          }
-        } else {
-          setErrorsValidate({...errorsValidate, password: false})
-        }
-        break;
-      default: break
-    }
-  }
-
-  function blurHandler(e){
-    switch(e.target.name){
-      case "email":
-        setInputDirty({...inputDirty, email: true})
-        break;
-      case "password":
-        setInputDirty({...inputDirty, password: true})
-        break;
-      default: break
-    }
-  }
+  const data = {
+    email: useInput('', {isEmpty: true, minLength: 5, isEmail: true}),
+    password: useInput('', {isEmpty: true, minLength: 6})
+  };
 
   function loginForm(e) {
     e.preventDefault();
@@ -76,26 +24,29 @@ const LoginPage = () => {
         <h2>Добро пожаловать</h2>
         <form onSubmit={loginForm} method={'POST'}>
 
-          {(errorsValidate.email && inputDirty.email) && <p style={{color: 'red'}}>{ errorsValidate.email }</p>}
+          { ( data.email.isDirty && data.email.isEmpty.value ) && <p style={{color: 'red'}}>{ data.email.isEmpty.message }</p> }
+          { ( data.email.isDirty && data.email.emailError.value ) && <p style={{color: 'red'}}>{ data.email.emailError.message }</p> }
+          { ( data.email.isDirty && data.email.minLength.value ) && <p style={{color: 'red'}}>{ data.email.minLength.message }</p> }
           <MyInput
-            onBlur={e => blurHandler(e)}
             image_link={"https://assets.stickpng.com/thumbs/585e4beacb11b227491c3399.png"}
             type='text'
             placeholder='Ваша почта'
             name={'email'}
-            value={data.email}
-            onChange={e => valueForData(e)}
+            value={data.email.value}
+            onChange={data.email.onChange}
+            onBlur={data.email.onBlur}
           />
 
-          {(errorsValidate.password && inputDirty.password) && <p style={{color: 'red'}}>{ errorsValidate.password }</p>}
+          { (data.password.isDirty && data.password.isEmpty.value) && <p style={{color: 'red'}}>{ data.password.isEmpty.message }</p> }
+          { (data.password.isDirty && data.password.minLength.value) && <p style={{color: 'red'}}>{ data.password.minLength.message }</p> }
           <MyInput
-            onBlur={e => blurHandler(e)}
             image_link={"https://icons.veryicon.com/png/o/miscellaneous/rossi-icon-library/password-lock-10.png"}
             type='password'
             placeholder='Ваш пароль'
             name={'password'}
-            value={data.password}
-            onChange={e => valueForData(e)}
+            value={data.password.value}
+            onChange={data.password.onChange}
+            onBlur={data.password.onBlur}
           />
 
           <MyButton>Авторизация</MyButton>
