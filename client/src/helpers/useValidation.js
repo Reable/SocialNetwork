@@ -54,7 +54,7 @@ export default function useValidation (value, validations) {
   }, [value]);
 
   useEffect(() => {
-    if (isEmpty.value || emailError.value || minLength.value || maxLength.value){
+    if (isEmpty.value === true || emailError.value === true || minLength.value === true || maxLength.value === true ){
       setButtonDisabled(true);
     } else {
       setButtonDisabled(false);

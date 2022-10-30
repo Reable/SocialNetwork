@@ -29,11 +29,11 @@ form{
     width: 90%;
 }
 
-input{
+.input{
     border-top: none;
     border-left: none;
     border-right: none;
-    border-radius: 0;
+    border-radius: 50%;
 }
 
 a.backIndexPage {
