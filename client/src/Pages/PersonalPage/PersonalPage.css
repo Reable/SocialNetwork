@@ -1,0 +1,33 @@
+.navigations{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14pt;
+    width: 11%;
+    height: 30%;
+}
+
+.application{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14pt;
+    width: 80%;
+    height: 90%;
+}
+
+.personaPage{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    border: 1px solid red;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.flex{
+    justify-content: space-around;
+}

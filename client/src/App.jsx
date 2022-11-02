@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import RegisterPage from "./Pages/Auth/RegisterPage";
 import IndexPage from "./Pages/IndexPage";
 import LoginPage from "./Pages/Auth/LoginPage";
@@ -14,7 +14,8 @@ function App() {
         <Route path={'/registration'} element={<RegisterPage />} />
         <Route path={'/login'} element={<LoginPage />} />
         <Route path={'/personal_page'} element={<PersonalPage />} />
-        <Route path={'*'} element={<NotFound />}/>
+        <Route path={'/404'} element={<NotFound />}/>
+        <Route path={'*'} element={<Navigate to={'/posts'}/> }/>
       </Routes>
     </div>
   );
