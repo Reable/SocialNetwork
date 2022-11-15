@@ -1,4 +1,5 @@
 import type {
+    AddMemberWithChat,
     CreateMessage,
     DBCreateChat,
     DBCreatePrivateChat,
@@ -16,7 +17,7 @@ class MessageStorage{
             author_id: chat.user.id, // автор этого часа
             title: chat.data.title,
             image: chat.data.image || 'NonePhoto.png',
-            close: chat.data.close,
+            status: ActiveChat.CREATED,
             created_at: Math.round(Date.now() / 1000),
             updated_at: Math.round(Date.now() / 1000)
         }
@@ -32,6 +33,14 @@ class MessageStorage{
             updated_at: Math.round(Date.now() / 1000)
         }
         return db(DB_MESSAGE.PRIVATE_CHAT).insert(createPrivateChat);
+    }
+
+    async addMemberInChat(data: AddMemberWithChat){
+        return db(DB_MESSAGE.CHAT_MEMBERS).insert(data);
+    }
+
+    async searchChat(where: SearchChat , fields: [string] = ['*'], orderBy: [string] = ['id']){
+        return db(DB_MESSAGE.CHATS).where(where).select(fields).orderBy(orderBy);
     }
 
     async searchPrivateChat(where: SearchChat , fields: [string] = ['*'], orderBy: [string] = ['id']){

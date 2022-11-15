@@ -106,6 +106,15 @@ class AlreadyExists extends BadRequestError {
     }
 }
 
+class ChatNotFound extends BadRequestError {
+    static override STATUS_TEXT = 'Chat not found';
+    static override CODE = 'CHAT_NOT_FOUND';
+
+    constructor(_data: any = ChatNotFound.STATUS_TEXT, _code = BadRequestError.CODE, _message = BadRequestError.STATUS_TEXT) {
+        super(_data, ChatNotFound.CODE, ChatNotFound.STATUS_TEXT);
+    }
+}
+
 class PrivateChatNotFound extends BadRequestError {
     static override STATUS_TEXT = 'Private chat not found';
     static override CODE = 'PRIVATE_CHAT_NOT_FOUND';
@@ -128,5 +137,6 @@ export {
     ServiceError, BadRequestError, UnAuthorized,
     ValidationError, InvalidCredentials, SessionExpired,
     InsufficientRole, AlreadyExists, UserNotFound,
-    PrivateChatNotFound, YouNotMemberThisChat
+    PrivateChatNotFound, YouNotMemberThisChat, ChatNotFound,
+
 }
