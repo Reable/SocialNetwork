@@ -17,12 +17,6 @@ const RegisterPage = () => {
   function registrationForm(event) {
     event.preventDefault()
     console.log(data)
-    console.log({
-      name: data.name.buttonDisabled,
-      surname: data.surname.buttonDisabled,
-      email: data.email.buttonDisabled,
-      password: data.password.buttonDisabled
-    })
   }
 
 
@@ -86,7 +80,6 @@ const RegisterPage = () => {
         <div className={'flex'}>
           <Link to={'/'} className={'backIndexPage'}>Назад</Link>
           <Link to={'/login'} className={'backIndexPage'}>Войти</Link>
-          <Link to={'/personal_page'} className={'backIndexPage'}>Личный кабинет</Link>
         </div>
       </div>
     </div>

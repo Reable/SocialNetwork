@@ -9,7 +9,7 @@ const IndexPage = () => {
         <Link className={'indexPage'} to={'/login'}>
             <h2>Авторизация</h2>
         </Link>
-        <Link className={'indexPage'} to={'/registration'}>
+        <Link className={'indexPage'} to={'/register'}>
           <h2>Регистрация</h2>
         </Link>
       </nav>

@@ -13,7 +13,7 @@ const NotFound = () => {
         <div className={cl.navbar}>
           <Link className={cl.a} to={'/'}>Главная страница</Link>
           <Link className={cl.a} to={'/login'}>Авторизация</Link>
-          <Link className={cl.a} to={'/registration'}>Регистрация</Link>
+          <Link className={cl.a} to={'/register'}>Регистрация</Link>
         </div>
       </div>
     </div>

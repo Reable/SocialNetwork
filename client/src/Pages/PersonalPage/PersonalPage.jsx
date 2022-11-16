@@ -1,6 +1,5 @@
 import React from 'react';
 import './PersonalPage.css'
-import cl from './PersonalPage.css'
 import {Link} from "react-router-dom";
 
 const PersonalPage = () => {
@@ -14,7 +13,15 @@ const PersonalPage = () => {
             <Link to={'/'}>Тест 2</Link>
           </div>
           <div className={"application"}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, alias amet atque ducimus ipsum iusto nam nostrum perspiciatis totam. Beatae eveniet nam, nobis nostrum qui recusandae reprehenderit sequi totam!
+            <div className={'personal_data'}>
+              <div className={'personal_image'}>
+                <img src="https://png.pngtree.com/element_our/png_detail/20181206/users-vector-icon-png_260862.jpg" alt=""/>
+              </div>
+              <div className={"personal_name"}>
+                <p>Ivan</p>
+                <p>Razmyslov</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

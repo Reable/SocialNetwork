@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import MyInput from "../../components/UI/MyInput/MyInput";
 import MyButton from "../../components/UI/MyButton/MyButton";
 
 import './Auth.css'
 import {Link} from "react-router-dom";
 import useInput from "../../helpers/useInput";
+import {UserContext} from "../../context/UserContext";
 
 const LoginPage = () => {
-
+  const [setIsAuth] = useContext(UserContext);
   const data = {
     email: useInput('', {isEmpty: true, minLength: 5, isEmail: true}),
     password: useInput('', {isEmpty: true, minLength: 6})
@@ -15,7 +16,8 @@ const LoginPage = () => {
 
   function loginForm(e) {
     e.preventDefault();
-    console.log(data);
+    setIsAuth(true)
+    localStorage.setItem('jwt', 'dasasdasd')
   }
 
   return (
@@ -54,7 +56,7 @@ const LoginPage = () => {
 
         <div className={'flex'}>
           <Link to={'/'} className={'backIndexPage'}>Назад</Link>
-          <Link to={'/registration'} className={'backIndexPage'}>Регистрация</Link>
+          <Link to={'/register'} className={'backIndexPage'}>Регистрация</Link>
         </div>
       </div>
     </div>

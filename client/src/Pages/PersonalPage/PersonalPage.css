@@ -1,4 +1,5 @@
 .navigations{
+    text-align: center;
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -30,4 +31,21 @@
 
 .flex{
     justify-content: space-around;
+}
+
+.personal_data{
+    background-color: #ababab;
+    display: flex;
+    justify-content: left;
+}
+
+.personal_image{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.personal_image>img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
 }
