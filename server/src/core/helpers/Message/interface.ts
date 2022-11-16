@@ -65,3 +65,14 @@ export interface CreateMessage {
     chat_id?: number;
     message: string;
 }
+
+export interface IChatMembers {
+    id: number;
+    user_id: number;
+    chat_id: number;
+}
+
+export interface SearchMembers {
+    user_id?: number;
+    chat_id?:number;
+}

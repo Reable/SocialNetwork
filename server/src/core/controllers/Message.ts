@@ -3,7 +3,7 @@ import type {
     AddMemberWithChat,
     CreateMessage,
     DBCreatePrivateChat,
-    IChat,
+    IChat, IChatMembers,
     IDataCreateChat,
     IPrivateChat
 } from '../helpers/Message/interface';
@@ -61,7 +61,30 @@ class Message {
         return true
     }
 
-    async sendMessage (_data: CreateMessage, _user: IUser ):Promise<boolean>{
+    async sendMessage (data: CreateMessage, user: IUser ):Promise<boolean>{
+
+        const validator: Validator = new Validator();
+
+        validator.setRules('message', Validator.TYPES.string().required().min(1).max(255));
+        validator.setRules('chat_id', Validator.TYPES.number().required());
+
+        validator.validate(data);
+
+        const [chat]: [IChat] = await this._messageStorage.searchChat({id: data.chat_id});
+
+        if(!chat){
+            throw new ChatNotFound();
+        }
+
+        const [chatMembers]: [IChatMembers] = await this._messageStorage.searchMembersInChat({user_id: user.id, chat_id: data.chat_id});
+        if(!chatMembers){
+            throw new YouNotMemberThisChat();
+        }
+
+        data.author_id = user.id;
+
+        await this._messageStorage.createMessage(data)
+
         return true
     }
 
@@ -109,7 +132,7 @@ class Message {
 
         data.author_id = user.id;
 
-        return await this._messageStorage.createMessage(data);
+        return await this._messageStorage.createPrivateMessage(data);
     }
 
 }
