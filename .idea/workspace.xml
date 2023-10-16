@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="589b1b71-4db6-4896-a434-5382938479b0" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/404/NotFound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/404/NotFound.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/Auth/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/Auth/LoginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/Auth/RegisterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/Auth/RegisterPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/IndexPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/IndexPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/PersonalPage/PersonalPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/PersonalPage/PersonalPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/PersonalPage/PersonalPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/PersonalPage/PersonalPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/context/UserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/UserContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/Errors.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/controllers/Mail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/controllers/Message.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/controllers/User.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/helpers/Enums.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/helpers/Mail/interface.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/helpers/Message/enums.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/helpers/Message/interface.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/helpers/User/interface.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/helpers/validator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/services/database.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/services/transporterMail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/storage/MailStorage.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/storage/MessageStorage.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/storage/UserStorage.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/system/Mail.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/system/Message.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/core/system/User.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/middlewares/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/MailRouter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/MessageRouter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/UserRouter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/tsconfig.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +43,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="false" />
+    <option name="myAllFileTypesSelected" value="true" />
+    <option name="mySelectedFileTypes">
+      <set />
     </option>
   </component>
   <component name="Git.Settings">
@@ -38,6 +66,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2Du2VPJ4TTtuiVHcFKCEMdffF1t" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -48,16 +79,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/razmyslov/server/git/SocialNetwork",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/razmyslov/server/Reable-GIT/SocialNetwork",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.sourceCode.Sass",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/Users/razmyslov/server/Reable-GIT/SocialNetwork/server/node/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -94,6 +127,12 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/server/node/src/app.js" />
+        <option value="$PROJECT_DIR$/server/node/src/server.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
