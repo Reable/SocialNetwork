@@ -5,39 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="589b1b71-4db6-4896-a434-5382938479b0" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Fonts/Roboto-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Fonts/Roboto-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/404/404.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/404/NotFound.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/404/NotFound.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/Auth/Auth.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/Auth/LoginPage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/Auth/RegisterPage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/IndexPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/IndexPage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/PersonalPage/PersonalPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/PersonalPage/PersonalPage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Routes/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UI/MyButton/MyButon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UI/MyButton/MyButton.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UI/MyInput/MyInput.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UI/MyInput/MyInput.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/context/UserContext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/helpers/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/helpers/useInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/helpers/useValidation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/.editorconfig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/.gitattributes" beforeDir="false" />
@@ -89,7 +56,6 @@
       <change beforePath="$PROJECT_DIR$/server/php/laravel/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/database/seeders/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/docker-compose.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/phpunit.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/public/.htaccess" beforeDir="false" />
@@ -118,7 +84,6 @@
       <change beforePath="$PROJECT_DIR$/server/php/laravel/tests/TestCase.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/tests/Unit/ExampleTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/php/laravel/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/python/fastApi/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/python/fastApi/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,26 +124,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/razmyslov/server/Reable-GIT/SocialNetwork",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Sass",
-    "ts.external.directory.path": "/Users/razmyslov/server/Reable-GIT/SocialNetwork/server/node/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/razmyslov/server/Reable-GIT/SocialNetwork&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Sass&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/razmyslov/server/Reable-GIT/SocialNetwork/server/node/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/image" />
@@ -200,6 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661534672569</updated>
       <workItem from="1698664272183" duration="3384000" />
+      <workItem from="1700680160478" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1664127491693</created>
