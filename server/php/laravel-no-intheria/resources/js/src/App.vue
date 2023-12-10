@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import Header from "./components/Header.vue";
-
+import Header from "@/components/Header.vue";
 </script>
 
 <template>
     <Header />
-    <main class="w-[1200px] mx-auto">
+    <main class="px-[20px] max-w-7xl mx-auto">
         <router-view />
     </main>
 </template>

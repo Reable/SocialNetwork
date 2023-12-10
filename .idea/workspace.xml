@@ -5,91 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="589b1b71-4db6-4896-a434-5382938479b0" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/server/php/laravel/resources/js/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/php/laravel/resources/js/src/components/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/php/laravel/resources/js/src/pages/About.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/php/laravel/resources/js/src/pages/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/Auth/AuthPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/store/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Middleware/ValidateSignature.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Models/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/cors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/sanctum.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/database/migrations/2014_10_12_100000_create_password_reset_tokens_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/database/seeders/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel/resources/js/src/router/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel/resources/js/src/router/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/tests/Unit/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/router/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +67,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
     "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "18.17.1",
+    "javascript.nodejs.core.library.typings.version": "18.17.1",
     "last_opened_file_path": "/Users/razmyslov/server/Reable-GIT/SocialNetwork",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -181,7 +111,7 @@
       <workItem from="1700723477528" duration="152000" />
       <workItem from="1700771576226" duration="367000" />
       <workItem from="1700819623363" duration="673000" />
-      <workItem from="1702104508153" duration="7460000" />
+      <workItem from="1702104508153" duration="10875000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1664127491693</created>
@@ -210,5 +140,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/About.vue</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

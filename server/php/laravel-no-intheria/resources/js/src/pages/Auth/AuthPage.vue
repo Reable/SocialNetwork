@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <h1 class="text-5xl text-center my-10 font-medium">About me</h1>
+    <h1>AuthPage </h1>
 </template>
 
 <style scoped>
