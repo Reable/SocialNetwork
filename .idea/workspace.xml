@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="589b1b71-4db6-4896-a434-5382938479b0" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/Auth/AuthPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/router/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/components/AddPostForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/store/modules/posts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/store/modules/posts.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,33 +49,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "18.17.1",
-    "javascript.nodejs.core.library.typings.version": "18.17.1",
-    "last_opened_file_path": "/Users/razmyslov/server/Reable-GIT/SocialNetwork",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Sass",
-    "ts.external.directory.path": "/Users/razmyslov/server/Reable-GIT/SocialNetwork/client/vue/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.17.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.17.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/razmyslov/server/Reable-GIT/SocialNetwork&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Sass&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/razmyslov/server/Reable-GIT/SocialNetwork/client/vue/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/image" />
@@ -146,7 +136,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/About.vue</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
