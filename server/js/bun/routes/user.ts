@@ -10,8 +10,8 @@ route.post('/register', async (req, res, next) => {
         .catch(error => res.status(error.status ?? 400).json(error))
 });
 
-route.post('/login', async (req, res, next) => {
-    await UserValidator.login(req.body)
+route.post('/authorization', async (req, res, next) => {
+    await UserValidator.authorization(req.body)
         .then(data => res.status(200).json(data))
         .catch(error => res.status(error.status ?? 400).json(error))
 });

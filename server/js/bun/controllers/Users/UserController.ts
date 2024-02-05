@@ -18,6 +18,7 @@ export default {
             throw err
         }
     },
+
     async login(data:LoginUser): Promise<ResponseToken>{
         const user = await findUser({
             login:data.login
@@ -36,8 +37,9 @@ export default {
         let token: string = await createToken({id: user.id, login: user.login})
         return { token }
     },
-    async userByLogin(login: string):Promise<any>{
-        const user = await findUser({ login })
+
+    async userByLogin(data: string):Promise<any>{
+        const user = await findUser({ data })
 
         if(!user){
             throw {status: 404, message: "User not found"}

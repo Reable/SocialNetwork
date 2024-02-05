@@ -19,7 +19,7 @@ export default {
         }
         return await UserController.register(body)
     },
-    async login(body: LoginUser){
+    async authorization(body: LoginUser){
         const validate = new Validator(body, {
             "login": "required|string|minLength:3",
             "password": "required|string|minLength:6",
