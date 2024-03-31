@@ -19,6 +19,7 @@
     "bunrest": "^1.3.7",
     "dotenv": "^16.4.1",
     "drizzle-orm": "^0.29.3",
+    "hoho": "^0.20.2209036",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.9.1",
     "node-input-validator": "^4.5.1"

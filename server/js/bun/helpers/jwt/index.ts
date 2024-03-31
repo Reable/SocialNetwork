@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 export async function createToken(data: string | object | Buffer): Promise<string>{
-    return jwt.sign(data, "adsasasdas", {
+    return jwt.sign(data, "HelloWo98Rd)ou1", {
         expiresIn: "7d",
     });
 }

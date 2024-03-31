@@ -17,3 +17,10 @@ export async function findUser(data: any){
     let user = await db.select().from(users).where(data);
     return user[0];
 }
+
+export async function updateUser(data?: IUser, id: number){
+    let user = await db.update(users)
+        .set(data)
+        .where(eq(users.id, id));
+    return user[0];
+}

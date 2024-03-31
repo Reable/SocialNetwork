@@ -19,6 +19,7 @@ export default {
         }
         return await UserController.register(body)
     },
+
     async authorization(body: LoginUser){
         const validate = new Validator(body, {
             "login": "required|string|minLength:3",
@@ -31,4 +32,19 @@ export default {
         return await UserController.login(body)
     },
 
+    async update(body:any, user: IUser){
+        const validate = new Validator(body, {
+            "login": "string|maxLength:99",
+            "email": "string|email",
+            "name": "string",
+            "date_birth": "after:2000-01-01",
+            "password": "string|minLength:6",
+        })
+
+        if(await validate.fails()){
+            throw {errors: validate.errors}
+        }
+
+        return await UserController.update(body, user)
+    },
 }

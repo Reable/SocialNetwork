@@ -1,4 +1,4 @@
-import {createUser, findUser, getUserId} from "../../collections/users/users.ts";
+import {createUser, findUser, getUserId, updateUser} from "../../collections/users/users.ts";
 import {LoginUser, ResponseToken, RegisterUser} from "./types.ts";
 import {createToken} from "../../helpers/jwt";
 import {IUser} from "../../collections/users/types.ts";
@@ -56,6 +56,17 @@ export default {
                 image: user.image,
             }
         }
-
     },
+
+    async update(data?: IUser, user: IUser):Promise<any>{
+        try{
+            await updateUser(data, user.id)
+            return {...data}
+        } catch(err){
+            // @ts-ignore
+            console.log(err.message)
+        }
+    }
+
 }
+

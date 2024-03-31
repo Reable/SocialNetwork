@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="589b1b71-4db6-4896-a434-5382938479b0" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/components/AddPostForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/pages/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/store/modules/posts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/php/laravel-no-intheria/resources/js/src/store/modules/posts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/go/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/go/initializate/loadEnv.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/go/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/bun/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/bun/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/bun/bun.lockb" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/bun/bun.lockb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/bun/collections/users/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/bun/collections/users/users.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/bun/controllers/Users/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/bun/controllers/Users/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/bun/helpers/jwt/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/bun/helpers/jwt/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/bun/helpers/validator/user/userValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/bun/helpers/validator/user/userValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/bun/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/bun/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/js/bun/routes/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/js/bun/routes/user.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
